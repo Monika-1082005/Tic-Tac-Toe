@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,500&family=Domine:wght@500&family=Libre+Baskerville&family=Lora:ital,wght@1,400;1,700&family=Poppins:wght@300&display=swap');
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(11, 11, 30);
+    color: #fff;
+    font-family: 'Bricolage Grotesque', sans-serif;
+
+}
+
+#header {
+    background-color: rgb(0, 0, 33);
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#container {
+   
+    height: 60px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+}
+
+nav ul li h1 {
+    color: white;
+
+    font-size: 25px;
+    position: relative;
+    transition: background-color 5s;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li h1::after {
+    content: '';
+    left: 0;
+    /* right: 100; */
+    background-color: blueviolet;
+    width: 0;
+    height: 3px;
+    bottom: -6px;
+    transition: 0.5s;
+    position: absolute;
+    font-family: 'Bricolage Grotesque', sans-serif;
+
+}
+
+nav ul li h1:hover::after {
+    width: 100%;
+
+}
+
+.header-content {
+    display: flex;
+    /* background-color: blueviolet; */
+    justify-content: space-evenly;
+    margin-top: 5vw;
+    background-color: rgb(11, 11, 30);
+}
+
+.game-left {
+    /* text-align: center; */
+    display: grid;
+    grid-template-columns: repeat(3, 10vw);
+    grid-template-rows: repeat(3, 10vw);
+    flex-basis: 40%;
+}
+
+.box {
+    border: 2px solid white;
+    font-size: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.8s;
+    outline: none;
+    
+}
+
+.box:hover {
+    cursor: pointer;
+    /* background-color: rgb(44, 13, 72); */
+    background-color: rgb(11, 11, 75);
+    /* transform: translateY(-2px); */
+}
+
+.game-right {
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-right button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.5em;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+
+}
+
+.game-right button:hover {
+    background-color: blueviolet;
+    color: white;
+
+}
+.game-right p{
+    font-size: 1.5rem;
+}
+.br-0{
+    border-right: none;
+}
+.bl-0{
+    border-left: none;
+}
+.bt-0{
+    border-top: none;
+}
+.bb-0{
+    border-bottom: none;
+}
+@media only screen and (max-width:700px)
+{
+    .game-left,.game-right{
+        flex-basis: 100%;
+    }
+   .header-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   }
+   .game-right{
+    margin-top: 3rem;
+   }
+}
+
+#start{
+    margin-right: 10px;
+}
+.footer{
+    
+    background-color: rgb(0, 0, 33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 60px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:550px)
+{
+    body{
+        flex-wrap: wrap;
+    }
+    nav ul li h1{
+        font-size: 20px;
+        text-align: center;
+    }
+    .footer{
+        font-size:15px ;
+        text-align: center;
+    }
+}
